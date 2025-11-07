@@ -1,0 +1,33 @@
+@use "../../styles/variables.scss" as *;
+
+.nutrition-info {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  &__icon-container {
+    height: 60px;
+    width: 60px;
+    border-radius: $corner-radius;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__icon {
+    height: 20px;
+  }
+
+  &__amount {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0;
+  }
+
+  &__type {
+    color: $secondary-text-color;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+  }
+}
