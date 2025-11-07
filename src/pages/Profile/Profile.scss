@@ -1,3 +1,5 @@
+@use "../../styles/variables.scss" as *;
+
 .profile {
   min-height: 100vh;
   display: flex;
@@ -7,5 +9,29 @@
     flex-grow: 1;
     display: grid;
     grid-template-columns: auto 1fr;
+  }
+
+  &__main {
+    padding: 56px 40px 86px;
+
+    & > div {
+      max-width: 1126px;
+      margin: 0 auto;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 48px;
+
+    span {
+      color: $primary-content-color;
+    }
+  }
+
+  &__congrats {
+    margin: 28px 0 0;
   }
 }
