@@ -1,0 +1,6 @@
+@use "../../styles/variables.scss" as *;
+
+.performance-info {
+  background-color: $tertiary-content-color;
+  border-radius: $corner-radius;
+}

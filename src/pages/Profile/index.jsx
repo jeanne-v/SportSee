@@ -2,6 +2,7 @@ import { useParams } from "react-router";
 
 import SideBar from "../../components/SideBar";
 import NutritionInfo from "../../components/NutritionInfo";
+import PerformanceInfo from "../../components/PerformanceInfo";
 
 import useFetch from "../../utils/hooks/useFetch";
 
@@ -35,6 +36,7 @@ export default function Profile() {
                 </p>
 
                 <div className="profile__data">
+                  <PerformanceInfo id={params.id} />
                   <div className="profile__nutrition-data">
                     <NutritionInfo
                       icon={energyIcon}
