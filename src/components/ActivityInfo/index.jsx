@@ -48,7 +48,7 @@ export default function ActivityInfo({ id }) {
           responsive
           barGap="8"
         >
-          <Tooltip content={CustomTooltip} cursor={{ fill: "#C4C4C480" }} />
+          <Tooltip content={<CustomTooltip />} cursor={{ fill: "#C4C4C480" }} />
           <Text
             style={{
               fontSize: "15px",

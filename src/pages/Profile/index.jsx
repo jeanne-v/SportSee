@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import SideBar from "../../components/SideBar";
 import ActivityInfo from "../../components/ActivityInfo";
 import NutritionInfo from "../../components/NutritionInfo";
+import SessionInfo from "../../components/SessionInfo";
 import PerformanceInfo from "../../components/PerformanceInfo";
 
 import useFetch from "../../utils/hooks/useFetch";
@@ -40,6 +41,7 @@ export default function Profile() {
                   <div className="profile__data-full">
                     <ActivityInfo id={params.id} />
                   </div>
+                  <SessionInfo id={params.id} />
                   <PerformanceInfo id={params.id} />
                   <div className="profile__nutrition-data">
                     <NutritionInfo
