@@ -1,6 +1,7 @@
 import { useParams } from "react-router";
 
 import SideBar from "../../components/SideBar";
+import ActivityInfo from "../../components/ActivityInfo";
 import NutritionInfo from "../../components/NutritionInfo";
 import PerformanceInfo from "../../components/PerformanceInfo";
 
@@ -36,6 +37,9 @@ export default function Profile() {
                 </p>
 
                 <div className="profile__data">
+                  <div className="profile__data-full">
+                    <ActivityInfo id={params.id} />
+                  </div>
                   <PerformanceInfo id={params.id} />
                   <div className="profile__nutrition-data">
                     <NutritionInfo
