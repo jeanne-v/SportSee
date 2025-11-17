@@ -5,6 +5,7 @@ import ActivityInfo from "../../components/ActivityInfo";
 import NutritionInfo from "../../components/NutritionInfo";
 import SessionInfo from "../../components/SessionInfo";
 import PerformanceInfo from "../../components/PerformanceInfo";
+import ScoreInfo from "../../components/ScoreInfo";
 
 import useFetch from "../../utils/hooks/useFetch";
 
@@ -43,6 +44,7 @@ export default function Profile() {
                   </div>
                   <SessionInfo id={params.id} />
                   <PerformanceInfo id={params.id} />
+                  <ScoreInfo score={data.todayScore} />
                   <div className="profile__nutrition-data">
                     <NutritionInfo
                       icon={energyIcon}
