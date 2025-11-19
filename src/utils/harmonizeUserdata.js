@@ -18,6 +18,10 @@ class UserMainDataObj {
   }
 
   get todayScore() {
-    return this._todayScore ? this._todayScore : this._score;
+    return this._todayScore !== undefined
+      ? this._todayScore
+      : this._score !== undefined
+      ? this._score
+      : 0;
   }
 }
