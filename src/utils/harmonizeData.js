@@ -1,5 +1,5 @@
-export default function harmonizeUserData(data) {
-  if (data.userInfos) {
+export default function harmonizeData(data, harmonize) {
+  if (harmonize === "mainData") {
     return new UserMainDataObj(data);
   } else {
     return data;

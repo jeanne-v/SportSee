@@ -17,7 +17,7 @@ import cheeseburgerIcon from "../../assets/cheeseburger.png";
 
 export default function Profile() {
   const params = useParams();
-  const { data, error } = useFetch(`http://localhost:3000/user/${params.id}`);
+  const { data, error } = useFetch(`http://localhost:3000/user/${params.id}`, "mainData");
 
   if (error) {
     return <h1>{error.message}</h1>;

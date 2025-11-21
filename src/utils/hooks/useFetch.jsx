@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import harmonizeUserData from "../harmonizeUserdata";
+import harmonizeData from "../harmonizeData";
 
 /**
  * @typedef {object} fetchStatus
@@ -13,9 +13,10 @@ import harmonizeUserData from "../harmonizeUserdata";
  * Fetches ressource
  *
  * @param {string} url - the url of the ressource to be fetched
+ * @param {string} [harmonize] - optional data harmonization type
  * @returns {fetchStatus}
  */
-export default function useFetch(url) {
+export default function useFetch(url, harmonize) {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -31,7 +32,7 @@ export default function useFetch(url) {
           throw new Error(res.status + " " + res.statusText);
         }
         const resData = await res.json();
-        setData(harmonizeUserData(resData.data));
+        setData(harmonizeData(resData.data, harmonize));
       } catch (err) {
         setError(err);
       } finally {
@@ -40,7 +41,7 @@ export default function useFetch(url) {
     }
 
     fetchData();
-  }, [url]);
+  }, [url, harmonize]);
 
   return { data, isLoading, error };
 }
