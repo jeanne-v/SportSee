@@ -3,4 +3,12 @@
 .session-info {
   border-radius: $corner-radius;
   background-color: $primary-content-color;
+
+  &__error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $dark-bg-text-color;
+    height: 100%;
+  }
 }

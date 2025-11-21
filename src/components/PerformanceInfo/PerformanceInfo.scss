@@ -3,4 +3,12 @@
 .performance-info {
   background-color: $tertiary-content-color;
   border-radius: $corner-radius;
+
+  &__error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $dark-bg-text-color;
+    height: 100%;
+  }
 }

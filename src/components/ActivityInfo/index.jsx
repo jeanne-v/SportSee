@@ -12,7 +12,7 @@ import {
 } from "recharts";
 
 export default function ActivityInfo({ id }) {
-  const { data } = useFetch(`http://localhost:3000/user/${id}/activity`);
+  const { data, error } = useFetch(`http://localhost:3000/user/${id}/activity`);
 
   let activityData = null;
 
@@ -26,6 +26,16 @@ export default function ActivityInfo({ id }) {
         "Calories brûlées (kCal)": session.calories,
       };
     });
+  }
+
+  if (error) {
+    return (
+      <div className="activity-info">
+        <div className="activity-info__error">
+          <p>{error.message}</p>
+        </div>
+      </div>
+    );
   }
 
   const textStyle = {

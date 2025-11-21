@@ -5,7 +5,7 @@ import { RadarChart, Radar, PolarGrid, PolarAngleAxis, PolarRadiusAxis } from "r
 import "./PerformanceInfo.scss";
 
 export default function PerformanceInfo({ id }) {
-  const { data } = useFetch(`http://localhost:3000/user/${id}/performance`);
+  const { data, error } = useFetch(`http://localhost:3000/user/${id}/performance`);
 
   let perfData = null;
 
@@ -38,6 +38,16 @@ export default function PerformanceInfo({ id }) {
         return { name, value: item.value };
       })
       .toReversed();
+  }
+
+  if (error) {
+    return (
+      <div className="performance-info">
+        <div className="performance-info__error">
+          <p>{error.message}</p>
+        </div>
+      </div>
+    );
   }
 
   return (

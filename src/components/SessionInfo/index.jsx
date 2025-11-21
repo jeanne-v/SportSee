@@ -5,13 +5,23 @@ import { LineChart, Line, XAxis, Tooltip, Text, Rectangle } from "recharts";
 import "./SessionInfo.scss";
 
 export default function SessionInfo({ id }) {
-  const { data } = useFetch(`http://localhost:3000/user/${id}/average-sessions`);
+  const { data, error } = useFetch(`http://localhost:3000/user/${id}/average-sessions`);
 
   const textStyle = {
     fill: "#FFFFFF80",
     fontFamily: "Roboto",
     fontWeight: 500,
   };
+
+  if (error) {
+    return (
+      <div className="session-info">
+        <div className="session-info__error">
+          <p>{error.message}</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="session-info">
