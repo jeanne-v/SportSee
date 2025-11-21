@@ -2,6 +2,19 @@ import { useState, useEffect } from "react";
 
 import harmonizeUserData from "../harmonizeUserdata";
 
+/**
+ * @typedef {object} fetchStatus
+ * @property {(object|null)} data
+ * @property {boolean} isLoading
+ * @property {(object|null)} error
+ */
+
+/**
+ * Fetches ressource
+ *
+ * @param {string} url - the url of the ressource to be fetched
+ * @returns {fetchStatus}
+ */
 export default function useFetch(url) {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
