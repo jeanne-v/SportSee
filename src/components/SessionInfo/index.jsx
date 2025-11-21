@@ -2,7 +2,7 @@ import useFetch from "../../utils/hooks/useFetch";
 
 import { LineChart, Line, XAxis, Tooltip, Text, Rectangle } from "recharts";
 
-import "./SessionInfo.scss";
+import "./SessionInfo.css";
 
 export default function SessionInfo({ id }) {
   const { data, error } = useFetch(`http://localhost:3000/user/${id}/average-sessions`);

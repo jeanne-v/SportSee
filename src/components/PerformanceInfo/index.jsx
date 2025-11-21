@@ -2,7 +2,7 @@ import useFetch from "../../utils/hooks/useFetch";
 
 import { RadarChart, Radar, PolarGrid, PolarAngleAxis, PolarRadiusAxis } from "recharts";
 
-import "./PerformanceInfo.scss";
+import "./PerformanceInfo.css";
 
 export default function PerformanceInfo({ id }) {
   const { data, error } = useFetch(`http://localhost:3000/user/${id}/performance`);

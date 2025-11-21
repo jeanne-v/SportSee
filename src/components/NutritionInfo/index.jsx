@@ -1,4 +1,4 @@
-import "./NutritionInfo.scss";
+import "./NutritionInfo.css";
 
 export default function NutritionInfo({ icon, bgColor, amount, unit, text }) {
   return (

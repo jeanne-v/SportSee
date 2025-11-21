@@ -1,4 +1,4 @@
-import "./SideBar.scss";
+import "./SideBar.css";
 
 import yogaIcon from "../../assets/yoga-icon.png";
 import swimmingIcon from "../../assets/swimming-icon.png";

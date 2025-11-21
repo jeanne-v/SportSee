@@ -9,7 +9,7 @@ import ScoreInfo from "../../components/ScoreInfo";
 
 import useFetch from "../../utils/hooks/useFetch";
 
-import "./Profile.scss";
+import "./Profile.css";
 import energyIcon from "../../assets/energy.png";
 import chickenIcon from "../../assets/chicken.png";
 import appleIcon from "../../assets/apple.png";

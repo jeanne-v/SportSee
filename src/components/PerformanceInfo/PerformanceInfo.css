@@ -1,0 +1,12 @@
+.performance-info {
+  background-color: #282d30;
+  border-radius: 6px;
+}
+
+.performance-info__error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  height: 100%;
+}

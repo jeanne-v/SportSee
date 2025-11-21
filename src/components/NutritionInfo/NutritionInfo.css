@@ -1,0 +1,31 @@
+.nutrition-info {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nutrition-info__icon-container {
+  height: 60px;
+  width: 60px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nutrition-info__icon {
+  height: 20px;
+}
+
+.nutrition-info__amount {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0;
+}
+
+.nutrition-info__type {
+  color: #020203;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+}
