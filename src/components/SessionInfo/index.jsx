@@ -17,7 +17,8 @@ export default function SessionInfo({ id }) {
     return (
       <div className="session-info">
         <div className="session-info__error">
-          <p>{error.message}</p>
+          <p>Une erreur est survenue, merci de réessayer plus tard</p>
+          <p>Erreur: {error.message}</p>
         </div>
       </div>
     );

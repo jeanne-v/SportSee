@@ -20,7 +20,12 @@ export default function Profile() {
   const { data, error } = useFetch(`http://localhost:3000/user/${params.id}`, "mainData");
 
   if (error) {
-    return <h1>{error.message}</h1>;
+    return (
+      <>
+        <h1>Une erreur est survenue, merci de réessayer plus tard</h1>
+        <p>Erreur: {error.message}</p>
+      </>
+    );
   }
 
   return (

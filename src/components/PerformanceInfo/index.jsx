@@ -44,7 +44,8 @@ export default function PerformanceInfo({ id }) {
     return (
       <div className="performance-info">
         <div className="performance-info__error">
-          <p>{error.message}</p>
+          <p>Une erreur est survenue, merci de réessayer plus tard</p>
+          <p>Erreur: {error.message}</p>
         </div>
       </div>
     );
